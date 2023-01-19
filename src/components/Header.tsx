@@ -1,4 +1,4 @@
-import { Book24Regular, Library24Filled, Library24Regular, NumberCircle124Regular } from "@fluentui/react-icons";
+import { Book24Regular, BuildingGovernment24Regular, Library24Filled, Library24Regular, NumberCircle124Regular, Person24Regular } from "@fluentui/react-icons";
 import { Link } from "react-router-dom";
 import { Profile } from "../assets";
 import * as _ from "../styles/Header";
@@ -27,6 +27,12 @@ const Header = () => {
         <_.Links to="/">
           <_.TitleContainer>
             <NumberCircle124Regular primaryFill="black" />
+            <p>학생 랭크</p>
+          </_.TitleContainer>
+        </_.Links>
+        <_.Links to="/">
+          <_.TitleContainer>
+            <Person24Regular primaryFill="black" />
             <p>내 독서록</p>
           </_.TitleContainer>
         </_.Links>
