@@ -1,5 +1,6 @@
+import { Book24Regular, Library24Filled, Library24Regular, NumberCircle124Regular } from "@fluentui/react-icons";
 import { Link } from "react-router-dom";
-import { BestSeller, BookShelf, MyBook, Profile } from "../assets";
+import { Profile } from "../assets";
 import * as _ from "../styles/Header";
 
 const Header = () => {
@@ -13,19 +14,19 @@ const Header = () => {
         </_.Links>
         <_.Links to="/">
           <_.TitleContainer>
-            <img src={BestSeller} />
+            <Book24Regular primaryFill="black"/>
             <p>인기 도서</p>
           </_.TitleContainer>
         </_.Links>
         <_.Links to="/">
           <_.TitleContainer>
-            <img src={BookShelf} />
+            <Library24Regular primaryFill="black"/>
             <p>책꽃이</p>
           </_.TitleContainer>
         </_.Links>
         <_.Links to="/">
           <_.TitleContainer>
-            <img src={MyBook} />
+            <NumberCircle124Regular primaryFill="black" />
             <p>내 독서록</p>
           </_.TitleContainer>
         </_.Links>
