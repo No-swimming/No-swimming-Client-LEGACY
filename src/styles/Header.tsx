@@ -71,6 +71,7 @@ export const Button = styled.button`
 export const NameContainer = styled.div`
   display: flex;
   color: black;
+  align-items: center;
   gap: 12px;
   & > p {
     font-size: 20px;
@@ -79,5 +80,14 @@ export const NameContainer = styled.div`
     border-radius: 50%;
     width: 28px;
     height: 28px;
+  }
+  & > div {
+    background: #3D3D3D;
+    color: #ffffff;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 2px;
   }
 `;

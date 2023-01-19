@@ -51,6 +51,9 @@ const Header = () => {
       ) : (
         <_.Links to="/">
           <_.NameContainer>
+            <div>
+              {isTeacher ? "선생님" : "학생"}
+            </div>
             <p>김이름</p>
             <img src={Profile} />
           </_.NameContainer>
