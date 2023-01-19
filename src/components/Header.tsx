@@ -6,6 +6,7 @@ import * as _ from "../styles/Header";
 const Header = () => {
   /* 토큰이 있나없나 확인을 대체하는 임시 코드 */
   const token = false;
+  const isTeacher = true;
   return (
     <_.HeaderContainer>
       <div>
@@ -36,6 +37,12 @@ const Header = () => {
             <p>내 독서록</p>
           </_.TitleContainer>
         </_.Links>
+        {isTeacher ?<_.Links to="/">
+          <_.TitleContainer>
+            <BuildingGovernment24Regular primaryFill="black" />
+            <p>관리</p>
+          </_.TitleContainer>
+        </_.Links> : null}
       </div>
       {token ? (
         <_.Links to="/">
