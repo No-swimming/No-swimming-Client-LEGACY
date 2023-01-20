@@ -48,3 +48,17 @@ export const GoogleBtn = styled.button`
         height: 18px;
     }
 `;
+
+export const BtnLong = styled.button`
+    padding: 8px 16px;
+    width: 100%;
+
+    background-color: #000000;
+    color: #FFFFFF;
+    border-radius: 888px;
+    border: none;
+
+    font-size: 20px;
+
+    cursor: pointer;
+`;
