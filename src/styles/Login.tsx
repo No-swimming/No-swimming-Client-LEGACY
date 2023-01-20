@@ -8,10 +8,20 @@ export const BgContainer = styled.div`
     gap: 32px;
     border-radius: 16px;
 
-    font-size: 24px;
-
     background-color: #FFFFFF;
+
+    position: absolute;
+
+
     box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+    & > p{
+        font-size: 24px;
+        font-weight: 700;
+    }
+    & > a{
+        font-size: 16px;
+        cursor: pointer;
+    }
 `;
 
 export const GoogleBtn = styled.button`
