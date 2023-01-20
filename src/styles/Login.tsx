@@ -16,7 +16,6 @@ export const BgContainer = styled.div`
     top: 50%;
     left:50%;
 
-
     box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
     & > p{
         font-size: 24px;
