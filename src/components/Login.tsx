@@ -10,4 +10,4 @@ function GoogleLoginBtn(){
     );
 };
 
-export default GoogleLoginBtn;
+export {GoogleLoginBtn};
