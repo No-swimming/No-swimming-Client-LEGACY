@@ -4,6 +4,7 @@ export const BgContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 400px;
     padding: 32px;
     gap: 32px;
     border-radius: 16px;
@@ -11,6 +12,9 @@ export const BgContainer = styled.div`
     background-color: #FFFFFF;
 
     position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left:50%;
 
 
     box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
