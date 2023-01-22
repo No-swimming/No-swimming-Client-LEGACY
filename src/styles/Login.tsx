@@ -62,3 +62,30 @@ export const BtnLong = styled.button`
 
     cursor: pointer;
 `;
+
+export const Input = styled.div` 
+    width: 100%;
+
+    & > label{
+        font-size: 16px;
+        padding-left: 12px;
+        padding-bottom: 4px;
+        color: #00000080;
+    }
+    & > div{
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        justify-content: space-between;
+        border-radius: 12px;
+
+        border: 1px solid #0000001A
+    }
+    & > div > input{
+        width: 100%;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-size: 20px;
+    }
+`;
