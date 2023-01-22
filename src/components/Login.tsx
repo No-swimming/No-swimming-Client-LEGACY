@@ -1,6 +1,7 @@
 import * as _ from "../styles/Login";
 import { GoogleMiniIcn } from "../assets";
-import { Eye28Regular } from "@fluentui/react-icons";
+import { Eye24Regular, EyeOff24Regular } from "@fluentui/react-icons";
+import { useState } from "react";
 
 function GoogleLoginBtn(){
     return(
@@ -16,13 +17,32 @@ type LoginInputType = {
     isPassword?: boolean;
 }
 
+type EyeType = {
+    onClick: any;
+    isTrue: Boolean;
+}
+
+function PasswordEye({onClick, isTrue}:EyeType){
+    return(
+        <button onClick={onClick}>
+            {isTrue ? <EyeOff24Regular/> : <Eye24Regular/>}
+        </button>
+    );
+};
+
 function LoginInput({label, isPassword}:LoginInputType){
+    const [showPwd,setShow] = useState(false);
+    function pwdEyeswitch(){
+        if(showPwd===false) {setShow(true); console.log("setshowis True ");}
+        else if(showPwd===true) setShow(false);
+    }
+
     return(
         <_.Input>
             <label>{label}</label>
             <div>
                 {isPassword ? <input type="password"/> : <input type="text"/> }
-                {isPassword ? <Eye28Regular/> : null}
+                {isPassword ? <PasswordEye onClick={pwdEyeswitch} isTrue={showPwd} /> : null}
             </div>
         </_.Input>
     );
