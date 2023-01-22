@@ -11,3 +11,5 @@ export const Background = require("./imgs/Background.png");
 
 /* 검색바 이미지 */
 export const SearchBtn = require("./imgs/Search.png");
+/*드롭다운 이미지*/
+export const DropDownImg = require("./imgs/DropDown.png");
