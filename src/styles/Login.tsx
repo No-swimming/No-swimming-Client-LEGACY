@@ -88,4 +88,9 @@ export const Input = styled.div`
         background-color: transparent;
         font-size: 20px;
     }
+    & > div > button{
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
 `;
