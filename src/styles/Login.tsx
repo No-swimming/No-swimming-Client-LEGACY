@@ -68,7 +68,7 @@ export const Input = styled.div`
 
     & > label{
         font-size: 16px;
-        padding-left: 12px;
+        padding-left: 4px;
         padding-bottom: 4px;
         color: #00000080;
     }
@@ -77,7 +77,7 @@ export const Input = styled.div`
         align-items: center;
         padding: 12px;
         justify-content: space-between;
-        border-radius: 12px;
+        border-radius: 8px;
 
         border: 1px solid #0000001A
     }
