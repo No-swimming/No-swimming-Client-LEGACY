@@ -24,14 +24,12 @@ const Login = () => {
     else{
         return(
             <_.BgContainer>
-                <div>
-                    <p>관리자 로그인</p>
-                    <a onClick={switchCard}>← 돌아가기</a>
-                </div>
+                <p>관리자 로그인</p>
                 <LoginInput label="아이디" />
                 <LoginInput label="비밀번호" isPassword />
                 계정을 발급받으려면 서비스 관리자에게 문의하세요
                 <_.BtnLong>로그인</_.BtnLong>
+                <a onClick={switchCard}>← 돌아가기</a>
             </_.BgContainer>
         );
     }
