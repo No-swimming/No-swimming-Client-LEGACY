@@ -41,7 +41,7 @@ function LoginInput({label, isPassword}:LoginInputType){
         <_.Input>
             <label>{label}</label>
             <div>
-                {isPassword ? <input type="password"/> : <input type="text"/> }
+                {isPassword ? <input type={showPwd ? "text" : "password"}/> : <input type="text"/> }
                 {isPassword ? <PasswordEye onClick={pwdEyeswitch} isTrue={showPwd} /> : null}
             </div>
         </_.Input>
