@@ -25,7 +25,7 @@ type EyeType = {
 function PasswordEye({onClick, isTrue}:EyeType){
     return(
         <button onClick={onClick}>
-            {isTrue ? <EyeOff24Regular/> : <Eye24Regular/>}
+            {isTrue ? <EyeOff24Regular primaryFill="#808080" /> : <Eye24Regular primaryFill="#808080" />}
         </button>
     );
 };
@@ -33,7 +33,7 @@ function PasswordEye({onClick, isTrue}:EyeType){
 function LoginInput({label, isPassword}:LoginInputType){
     const [showPwd,setShow] = useState(false);
     function pwdEyeswitch(){
-        if(showPwd===false) setShow(true);
+        if(showPwd===false)setShow(true);
         else if(showPwd===true) setShow(false);
     }
 
