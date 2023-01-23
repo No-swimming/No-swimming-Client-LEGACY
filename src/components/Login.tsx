@@ -33,7 +33,7 @@ function PasswordEye({onClick, isTrue}:EyeType){
 function LoginInput({label, isPassword}:LoginInputType){
     const [showPwd,setShow] = useState(false);
     function pwdEyeswitch(){
-        if(showPwd===false) {setShow(true); console.log("setshowis True ");}
+        if(showPwd===false) setShow(true);
         else if(showPwd===true) setShow(false);
     }
 
