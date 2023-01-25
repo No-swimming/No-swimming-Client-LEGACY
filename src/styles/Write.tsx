@@ -59,6 +59,7 @@ export const WriteContainer = styled.div`
   }
   & > textarea {
     border: 1px solid ${theme.subGray};
+    width: 99%;
     border-radius: 8px;
     padding: 8px;
     font-size: 20px;
