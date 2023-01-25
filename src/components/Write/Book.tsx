@@ -1,5 +1,8 @@
 import * as _ from "../../styles/Write";
-const Book = () => {
+type props = {
+  handleInputChange: (props: string) => (event: any) => void;
+};
+const Book = ({ handleInputChange }: props) => {
   const teacher = ["a", "b", "담당선생님", "c"];
   return (
     <_.TopContainer>
@@ -9,10 +12,8 @@ const Book = () => {
       </div>
       <div>
         <_.Label>담당 선생님</_.Label>
-        <_.Select>
-          <option selected disabled>
-            담당 선생님
-          </option>
+        <_.Select onChange={handleInputChange("teacher_id")}>
+          <option value="">담당 선생님</option>
           {teacher.map((item) => {
             return (
               <option key={item} value={item}>

@@ -3,25 +3,29 @@ import Header from "../components/Header";
 import Book from "../components/Write/Book";
 import BookWrite from "../components/Write/BookWrite";
 import { useState } from "react";
-
+type valueType = {
+  teacher_id: number;
+  title: string;
+  content: string;
+};
 const Write = () => {
-  const [value, setValue] = useState({
+  const [value, setValue] = useState<valueType>({
     teacher_id: 0,
     title: "",
     content: "",
   });
-  const HandleInputChane =
-    (props: any) => (e: React.ChangeEventHandler<HTMLInputElement>) => {
-      setValue({ ...value, [props]: e.target.value });
-    };
-    
+
+  const handleInputChange = (props: string) => (event: any) => {
+    setValue({ ...value, [props]: event.target.value });
+  };
+
   return (
     <>
       <Header />
       <_.Container>
         <h1>독서록 작성</h1>
-        <Book />
-        <BookWrite />
+        <Book handleInputChange={handleInputChange} />
+        <BookWrite value={value} handleInputChange={handleInputChange} />
       </_.Container>
     </>
   );
