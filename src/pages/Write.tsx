@@ -8,6 +8,8 @@ type valueType = {
   title: string;
   content: string;
 };
+const BookData: number = 9788983927729;
+
 const Write = () => {
   const [value, setValue] = useState<valueType>({
     teacher_id: 0,

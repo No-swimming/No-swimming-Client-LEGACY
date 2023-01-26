@@ -18,13 +18,30 @@ export const TopContainer = styled.div`
   border-bottom: 1px solid #bfbfbf;
 `;
 export const Book = styled.div`
+  gap: 8px;
   background-color: #2d287b;
   width: 438px;
-  height: 80px;
+  height: 90px;
   border-radius: 8px;
   color: white;
   padding: 4px;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  & > img {
+    height: 80px;
+    border-radius: 4px;
+  }
+  & > div {
+    display: flex;
+    flex-direction: column;
+    & > p:first-child {
+      font-weight: bold;
+    }
+    & > p:last-child {
+      opacity: 0.5;
+    }
+  }
 `;
 export const Label = styled.p`
   color: ${theme.gray};
