@@ -1,3 +1,4 @@
+import { Search32Regular } from "@fluentui/react-icons";
 import { SearchBtn } from "../assets";
 import * as _ from "../styles/Main";
 
@@ -8,7 +9,7 @@ const Search = () => {
       <_.SearchInput>
         <input placeholder="제목, 작가 검색" />
         <button>
-          <img src={SearchBtn} />
+          <Search32Regular primaryFill="#BFBFBF" />
         </button>
       </_.SearchInput>
       <_.PopularContainer>

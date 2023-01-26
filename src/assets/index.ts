@@ -1,4 +1,4 @@
-export const LogoImg = require("./imgs/Logo.png");
+export const LogoImg = require("./imgs/LogoSVG.svg").default;
 /* 헤더 이미지 */
 export const BestSeller = require("./imgs/BestSeller.png");
 export const BookShelf = require("./imgs/BookShelf.png");
