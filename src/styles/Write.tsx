@@ -94,3 +94,24 @@ export const CountContainer = styled.div`
   gap: 8px;
   margin-top: 18px;
 `;
+
+export const SubmitContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  padding-bottom: 24px;
+  & > button {
+    cursor: pointer;
+    background-color: ${theme.subGray};
+    color: black;
+    border: none;
+    font-size: 20px;
+    padding: 8px 16px;
+    border-radius: 21px;
+  }
+  & > button:first-child {
+    background-color: black;
+    color: white;
+  }
+`;

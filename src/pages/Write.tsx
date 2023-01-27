@@ -3,12 +3,12 @@ import Header from "../components/Header";
 import Book from "../components/Write/Book";
 import BookWrite from "../components/Write/BookWrite";
 import { useState } from "react";
+import Submit from "../components/Write/Submit";
 type valueType = {
   teacher_id: number;
   title: string;
   content: string;
 };
-const BookData: number = 9788983927729;
 
 const Write = () => {
   const [value, setValue] = useState<valueType>({
@@ -21,6 +21,9 @@ const Write = () => {
     setValue({ ...value, [props]: event.target.value });
   };
 
+  const onClickSubmit = () => {};
+  const onClickNoSubmit = () => {};
+
   return (
     <>
       <Header />
@@ -28,6 +31,10 @@ const Write = () => {
         <h1>독서록 작성</h1>
         <Book handleInputChange={handleInputChange} />
         <BookWrite value={value} handleInputChange={handleInputChange} />
+        <Submit
+          onClickSubmit={onClickSubmit}
+          onClickNoSubmit={onClickNoSubmit}
+        />
       </_.Container>
     </>
   );
