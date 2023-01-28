@@ -15,6 +15,11 @@ export const CardBg = styled.div`
         gap: 8px;
         align-items: center;
     }
+    & > div{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
     & > img{
         width: 124px;
         border-radius:4px;
