@@ -1,9 +1,12 @@
 import { Heart24Regular } from '@fluentui/react-icons';
 import * as _ from '../styles/BookCard';
 
-function CardLarge(){
-    const imageURL:string = "https://asfadsfasdfa";
+type cardType = {
+    isbn: string;
+}
 
+function CardLarge({isbn}:cardType){
+    
     return(
         <_.CardBg>
             <img src='https://shopping-phinf.pstatic.net/main_3429447/34294472620.20230119071329.jpg?type=w300'/>
