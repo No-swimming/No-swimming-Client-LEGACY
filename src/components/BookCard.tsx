@@ -1,4 +1,5 @@
 import { Heart24Regular } from '@fluentui/react-icons';
+import axios from 'axios';
 import * as _ from '../styles/BookCard';
 
 type cardType = {
@@ -6,7 +7,23 @@ type cardType = {
 }
 
 function CardLarge({isbn}:cardType){
-    
+    const axiosConf = {
+        method: 'get',
+        url: 'https://openapi.naver.com/v1/search/book_adv.json?d_isbn=9788936438838',
+        headers: { 
+            'X-Naver-Client-Id': 'j5f2RAVP7kuBbFSvFLOa', 
+            'X-Naver-Client-Secret': 'n5RdT7atqc'
+        }
+        };
+        
+    axios(axiosConf)
+        .then(function (response) {
+        console.log(response.data);
+    })
+        .catch(function (error) {
+        console.log(error);
+    });
+
     return(
         <_.CardBg>
             <img src='https://shopping-phinf.pstatic.net/main_3429447/34294472620.20230119071329.jpg?type=w300'/>
