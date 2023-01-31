@@ -11,8 +11,8 @@ function CardLarge({isbn}:cardType){
         method: 'get',
         url: 'https://openapi.naver.com/v1/search/book_adv.json?d_isbn=9788936438838',
         headers: { 
-            'X-Naver-Client-Id': 'j5f2RAVP7kuBbFSvFLOa', 
-            'X-Naver-Client-Secret': 'n5RdT7atqc'
+            'X-Naver-Client-Id': 'key', 
+            'X-Naver-Client-Secret': 'secret'
         }
         };
         
