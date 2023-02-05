@@ -21,8 +21,8 @@ const Write = () => {
     setValue({ ...value, [props]: event.target.value });
   };
 
-  const onClickSubmit = () => {};
-  const onClickNoSubmit = () => {};
+  const onClickSubmit = () => { };
+  const onClickNoSubmit = () => { };
 
   return (
     <>
@@ -30,7 +30,7 @@ const Write = () => {
       <_.Container>
         <h1>독서록 작성</h1>
         <Book handleInputChange={handleInputChange} />
-        <BookWrite value={value} handleInputChange={handleInputChange} />
+        <BookWrite value={value} handleInputChange={handleInputChange} setValue={setValue} />
         <Submit
           onClickSubmit={onClickSubmit}
           onClickNoSubmit={onClickNoSubmit}
