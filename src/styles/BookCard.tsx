@@ -53,3 +53,9 @@ export const ButtonBlack = styled.button`
         padding: 8px 8px;
     }
 `;
+
+export const ButtonIcon = styled.button`
+    background: none;
+    border: none;
+    cursor: pointer;
+`
