@@ -26,9 +26,34 @@ export const CardBg = styled.div`
     }
 `;
 
+export const CardBgMini = styled.div`
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    width: 438px;
+    height: 80px;
+    padding: 4px;
+    gap: 8px;
+    background: #2D287B;
+    color: white;
+    font-weight: 700;
+    & > img{
+        height: inherit;
+        border-radius: 4px;
+    }
+`
+
 export const CardTitle = styled.p`
     font-weight: 700;
     font-size: 24px;
+    &.trans{
+        opacity: 0.5;
+    }
+`;
+
+export const CardTitleMini = styled.p`
+    font-weight: 700;
+    font-size: 20px;
     &.trans{
         opacity: 0.5;
     }
