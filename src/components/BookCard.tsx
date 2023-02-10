@@ -1,6 +1,8 @@
 import { Heart24Filled, Heart24Regular } from '@fluentui/react-icons';
 import { type } from '@testing-library/user-event/dist/type';
 import axios from 'axios';
+import { average } from 'color.js';
+import { useState } from 'react';
 import * as _ from '../styles/BookCard';
 
 type cardType = {
@@ -22,6 +24,7 @@ function CardHeart({onClick, hearted}:cardHeartType){
 };
 
 function CardLarge({isbn, hearted}:cardType){
+    const [bgcolor,setBgcolor] = useState("#000000");
     const axiosConf = {
         method: 'get',
         url: `https://openapi.naver.com/v1/search/book_adv.json?d_isbn=?{isbn}`,
@@ -29,7 +32,7 @@ function CardLarge({isbn, hearted}:cardType){
             'X-Naver-Client-Id': 'key', 
             'X-Naver-Client-Secret': 'secret'
         }
-        };
+    };
         
     axios(axiosConf)
         .then(function (response) {
@@ -39,9 +42,13 @@ function CardLarge({isbn, hearted}:cardType){
         console.log(error);
     });
 
+    function getAverage(){
+        average('http://0.0.0.0:8080/https://shopping-phinf.pstatic.net/main_3429447/34294472620.20230119071329.jpg?type=w300',{format:"hex"}).then(color => setBgcolor(color as string));
+    };
+
     return(
-        <_.CardBg>
-            <img src='https://shopping-phinf.pstatic.net/main_3429447/34294472620.20230119071329.jpg?type=w300'/>
+        <_.CardBg backgroud={bgcolor}>
+            <img src='https://shopping-phinf.pstatic.net/main_3429447/34294472620.20230119071329.jpg?type=w300' onLoad={getAverage} />
             <div>
                 <_.CardTitle>아버지의 해방일지</_.CardTitle>
                 <_.CardTitle className='trans'>정지아 | 2022</_.CardTitle>
