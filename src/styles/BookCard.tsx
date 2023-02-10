@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const CardBg = styled.div`
+export const CardBg = styled.div<{backgroud:string}>`
     display:flex;
     gap: 12px;
     padding: 12px;
     box-sizing: border-box;
     border-radius: 12px;
-    background: #2D287B;
+    background: ${props => props.backgroud};
     color: #FFFFFF;
     width: 650px;
     height: 200px;
