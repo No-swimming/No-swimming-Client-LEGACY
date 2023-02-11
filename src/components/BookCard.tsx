@@ -23,24 +23,22 @@ function CardHeart({onClick, hearted}:cardHeartType){
 };
 
 function CardLarge({isbn, hearted}:cardType){
-    
+    let naverBookResponse;
     const [bgcolor,setBgcolor] = useState("#000000");
     const axiosConf = {
         method: 'get',
         url: `http://monotype.iptime.org:10888/https://openapi.naver.com/v1/search/book_adv.json`,
         headers: { 
-            'X-Naver-Client-Id': '', 
-            'X-Naver-Client-Secret': '',
-            'Origin': '*'
+            'X-Naver-Client-Id': '8Fn1UoNIKdYVQyT9GXDJ', 
+            'X-Naver-Client-Secret': 'JPi8NyIrxY',
         },
         params: {
             'd_isbn' : isbn
         }
     };
-        
     axios(axiosConf)
         .then(function (response) {
-        console.log(response.data);
+        naverBookResponse = response.data.items[0];
     })
         .catch(function (error) {
         console.log(error);
