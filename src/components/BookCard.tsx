@@ -1,5 +1,4 @@
 import { Heart24Filled, Heart24Regular } from '@fluentui/react-icons';
-import { type } from '@testing-library/user-event/dist/type';
 import axios from 'axios';
 import { average } from 'color.js';
 import { useState } from 'react';
@@ -27,10 +26,14 @@ function CardLarge({isbn, hearted}:cardType){
     const [bgcolor,setBgcolor] = useState("#000000");
     const axiosConf = {
         method: 'get',
-        url: `https://openapi.naver.com/v1/search/book_adv.json?d_isbn=?{isbn}`,
+        url: `http://monotype.iptime.org:10888/https://openapi.naver.com/v1/search/book_adv.json`,
         headers: { 
-            'X-Naver-Client-Id': 'key', 
-            'X-Naver-Client-Secret': 'secret'
+            'X-Naver-Client-Id': '', 
+            'X-Naver-Client-Secret': '',
+            'Origin': '*'
+        },
+        params: {
+            'd_isbn' : isbn
         }
     };
         
@@ -43,7 +46,7 @@ function CardLarge({isbn, hearted}:cardType){
     });
 
     function getAverage(){
-        average('http://0.0.0.0:8080/https://shopping-phinf.pstatic.net/main_3429447/34294472620.20230119071329.jpg?type=w300',{format:"hex"}).then(color => setBgcolor(color as string));
+        average('http://monotype.iptime.org:10888/https://shopping-phinf.pstatic.net/main_3429447/34294472620.20230119071329.jpg?type=w300',{format:"hex"}).then(color => setBgcolor(color as string));
     };
 
     return(
