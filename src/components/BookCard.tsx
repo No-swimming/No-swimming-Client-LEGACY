@@ -23,6 +23,7 @@ function CardHeart({onClick, hearted}:cardHeartType){
 };
 
 function CardLarge({isbn, hearted}:cardType){
+    
     const [bgcolor,setBgcolor] = useState("#000000");
     const axiosConf = {
         method: 'get',
@@ -46,7 +47,10 @@ function CardLarge({isbn, hearted}:cardType){
     });
 
     function getAverage(){
-        average('http://monotype.iptime.org:10888/https://shopping-phinf.pstatic.net/main_3429447/34294472620.20230119071329.jpg?type=w300',{format:"hex"}).then(color => setBgcolor(color as string));
+        average('http://monotype.iptime.org:10888/https://shopping-phinf.pstatic.net/main_3429447/34294472620.20230119071329.jpg?type=w300',
+            {format:"hex"}
+        )
+        .then(color => setBgcolor(color as string));
     };
 
     return(
