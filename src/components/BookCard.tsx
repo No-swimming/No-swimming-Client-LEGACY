@@ -38,7 +38,7 @@ function CardLarge({hearted, data}:cardType){
             <div>
                 <_.CardTitle>{data.title}</_.CardTitle>
                 <_.CardTitle className='trans'>{data.author} | {data.pubdate.substr(0,4)}</_.CardTitle>
-                <_.CardBody>새삼스럽게 경탄스럽다! 압도적인 몰입감, 가슴 먹먹한 감동 정지아의 손끝에서 펼쳐지는 시대의 온기 미스터리 같은 한 남...</_.CardBody>
+                <_.CardBody>{data.description.substr(0,65)+"..."}</_.CardBody>
                 <div>
                     <_.ButtonBlack className='icon'>
                         <CardHeart onClick="afsd" hearted={hearted}/>
