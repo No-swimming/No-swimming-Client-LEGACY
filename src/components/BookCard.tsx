@@ -5,8 +5,8 @@ import { useState } from 'react';
 import * as _ from '../styles/BookCard';
 
 type cardType = {
-    isbn: string;
     hearted?: boolean;
+    data: any;
 }
 
 type cardHeartType = {
@@ -22,31 +22,11 @@ function CardHeart({onClick, hearted}:cardHeartType){
     );
 };
 
-function CardLarge({isbn, hearted}:cardType){
-    let naverBookResponse;
+function CardLarge({hearted, data}:cardType){
     const [bgcolor,setBgcolor] = useState("#000000");
-    const axiosConf = {
-        method: 'get',
-        url: `http://monotype.iptime.org:10888/https://openapi.naver.com/v1/search/book_adv.json`,
-        headers: { 
-            'X-Naver-Client-Id': '8Fn1UoNIKdYVQyT9GXDJ', 
-            'X-Naver-Client-Secret': 'JPi8NyIrxY',
-        },
-        params: {
-            'd_isbn' : isbn
-        }
-    };
-    axios(axiosConf)
-        .then(function (response) {
-        naverBookResponse = response.data.items[0];
-        console.log(naverBookResponse)
-    })
-        .catch(function (error) {
-        console.log(error);
-    });
 
     function getAverage(){
-        average(`http://monotype.iptime.org:10888/${naverBookResponse.image}`,
+        average(`http://monotype.iptime.org:10888/${data.image}`,
             {format:"hex"}
         )
         .then(color => setBgcolor(color as string));
@@ -54,14 +34,14 @@ function CardLarge({isbn, hearted}:cardType){
 
     return(
         <_.CardBg backgroud={bgcolor}>
-            <img src={naverBookResponse.image} onLoad={getAverage} />
+            <img src={data.image} onLoad={getAverage} />
             <div>
-                <_.CardTitle>{naverBookResponse.title}</_.CardTitle>
-                <_.CardTitle className='trans'>{naverBookResponse.author} | {naverBookResponse.pubdate.substr(0,4)}</_.CardTitle>
+                <_.CardTitle>{data.title}</_.CardTitle>
+                <_.CardTitle className='trans'>{data.author} | {data.pubdate.substr(0,4)}</_.CardTitle>
                 <_.CardBody>새삼스럽게 경탄스럽다! 압도적인 몰입감, 가슴 먹먹한 감동 정지아의 손끝에서 펼쳐지는 시대의 온기 미스터리 같은 한 남...</_.CardBody>
                 <div>
                     <_.ButtonBlack className='icon'>
-                        <CardHeart onClick="afsd"/>
+                        <CardHeart onClick="afsd" hearted={hearted}/>
                     </_.ButtonBlack>
                     <_.ButtonBlack>
                         읽은 책에 추가
