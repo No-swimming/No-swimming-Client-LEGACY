@@ -6,7 +6,17 @@ import * as _ from '../styles/BookCard';
 
 type cardType = {
     hearted?: boolean;
-    data: any;
+    data: bookData;
+}
+
+type bookData = {
+    title: string;
+    image: string;
+    link: string;
+    author: string;
+    pubdate: string;
+    isbn: string;
+    description: string;
 }
 
 type cardHeartType = {
