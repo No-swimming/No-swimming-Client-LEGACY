@@ -26,7 +26,7 @@ export const CardBg = styled.div<{backgroud:string}>`
     }
 `;
 
-export const CardBgMini = styled.div`
+export const CardBgMini = styled.div<{background:string}>`
     display: flex;
     align-items: center;
     border-radius: 8px;
@@ -34,7 +34,7 @@ export const CardBgMini = styled.div`
     height: 80px;
     padding: 4px;
     gap: 8px;
-    background: #2D287B;
+    background: ${props => props.background};
     color: white;
     font-weight: 700;
     & > img{

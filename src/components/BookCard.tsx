@@ -65,4 +65,25 @@ function CardLarge({hearted, data}:cardType){
     )
 }
 
-export default CardLarge;
+function CardMini({hearted, data}:cardType){
+    const [bgcolor,setBgcolor] = useState("#000000");
+
+    function getAverage(){
+        average(`http://monotype.iptime.org:10888/${data.image}`,
+            {format:"hex"}
+        )
+        .then(color => setBgcolor(color as string));
+    };
+
+    return(
+        <_.CardBgMini background={bgcolor}>
+            <img src={data.image} onLoad={getAverage} />
+            <div>
+                <_.CardTitleMini>{data.title}</_.CardTitleMini>
+                <_.CardTitleMini className='trans'>{data.author} | {data.pubdate.substring(0,4)}</_.CardTitleMini>
+            </div>
+        </_.CardBgMini>
+    )
+}
+
+export {CardLarge, CardMini};
