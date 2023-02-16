@@ -86,4 +86,12 @@ function CardMini({data}:cardType){
     )
 }
 
-export {CardLarge, CardMini};
+function BookInfoModal({hearted, data}:cardType){
+
+    return(
+        <_.InfoTransBlack>
+        </_.InfoTransBlack>
+    )
+}
+
+export {CardLarge, CardMini, BookInfoModal};

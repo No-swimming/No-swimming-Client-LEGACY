@@ -84,3 +84,11 @@ export const ButtonIcon = styled.button`
     border: none;
     cursor: pointer;
 `
+
+export const InfoTransBlack = styled.div`
+    width: 100vw;
+    height:100vh;
+    z-index: 888;
+    position: absolute;
+    background-color:#0000007F;
+`
