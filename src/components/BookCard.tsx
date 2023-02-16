@@ -65,7 +65,7 @@ function CardLarge({hearted, data}:cardType){
     )
 }
 
-function CardMini({hearted, data}:cardType){
+function CardMini({data}:cardType){
     const [bgcolor,setBgcolor] = useState("#000000");
 
     function getAverage(){
