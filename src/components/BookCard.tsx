@@ -87,9 +87,33 @@ function CardMini({data}:cardType){
 }
 
 function BookInfoModal({hearted, data}:cardType){
+    function closeModal(){
+        console.log("modalclosed");
+    }
 
     return(
-        <_.InfoTransBlack>
+        <_.InfoTransBlack onClick={closeModal}>
+            <_.InfoCardBG>
+                <img src={data.image}/>
+                <_.InfoCardInnerContainer>
+                    <_.CardTitle>{data.title}</_.CardTitle>
+                    <_.CardTitleMini className='trans'>{data.author} | {data.pubdate.substr(0,4)}</_.CardTitleMini>
+                    <span className='row'>
+                        <_.CardTitleMini className='trans'>ISBN</_.CardTitleMini>
+                        <_.CardTitleMini className='trans lite'>{data.isbn}</_.CardTitleMini>
+                    </span>
+                    <span>
+                        <_.CardTitleMini className='trans'>설명</_.CardTitleMini>
+                        <_.CardTitleMini className='trans lite'>{data.description.substring(0,100)}</_.CardTitleMini>
+                    </span>
+                    <div>
+                        <_.ButtonBlack>(하트)</_.ButtonBlack>
+                        <_.ButtonBlack>읽음으로 표시</_.ButtonBlack>
+                        <_.ButtonBlack>독서록 작성</_.ButtonBlack>
+                        <_.ButtonBlack>네이버 도서에서 보기</_.ButtonBlack>
+                    </div>
+                </_.InfoCardInnerContainer>
+            </_.InfoCardBG>
         </_.InfoTransBlack>
     )
 }

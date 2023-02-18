@@ -47,7 +47,7 @@ export const CardTitle = styled.p`
     font-weight: 700;
     font-size: 24px;
     &.trans{
-        opacity: 0.5;
+        color: #0000007f;
     }
 `;
 
@@ -55,7 +55,10 @@ export const CardTitleMini = styled.p`
     font-weight: 700;
     font-size: 20px;
     &.trans{
-        opacity: 0.5;
+        color: #0000007f;
+    }
+    &.lite{
+        font-weight: 400;
     }
 `;
 
@@ -91,4 +94,41 @@ export const InfoTransBlack = styled.div`
     z-index: 888;
     position: absolute;
     background-color:#0000007F;
+`
+
+export const InfoCardBG = styled.div`
+    z-index: 889;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #ffffff;
+
+    padding: 16px;
+    box-sizing: border-box;
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+
+
+    & > img{
+        width: 124px;
+        border-radius: 4px;
+    }
+`
+
+export const InfoCardInnerContainer = styled.div`
+    & > span.row{
+        display: flex;
+        gap: 4px;
+    }
+    & > div{
+        display: flex;
+        gap: 8px;
+    }
+`
+
+export const ButtonHorizionalLister = styled.div`
+
 `
