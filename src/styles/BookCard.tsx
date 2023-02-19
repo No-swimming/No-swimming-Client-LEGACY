@@ -60,6 +60,10 @@ export const CardTitleMini = styled.p`
     &.lite{
         font-weight: 400;
     }
+    &.desc{
+        height: 12ex;
+        overflow: scroll;
+    }
 `;
 
 export const CardBody = styled.p`

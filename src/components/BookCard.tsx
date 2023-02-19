@@ -104,7 +104,7 @@ function BookInfoModal({hearted, data}:cardType){
                     </span>
                     <span>
                         <_.CardTitleMini className='trans'>설명</_.CardTitleMini>
-                        <_.CardTitleMini className='trans lite'>{data.description.substring(0,100)}</_.CardTitleMini>
+                        <_.CardTitleMini className='trans lite'>{data.description}</_.CardTitleMini>
                     </span>
                     <div>
                         <_.ButtonBlack>(하트)</_.ButtonBlack>
